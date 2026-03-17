@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tennis</title>
-    <style>
-        body { font-family: Arial; background-color: #f2f2f2; margin: 0; }
-        header { background-color: #003366; color: white; padding: 20px; text-align: center; }
-        nav { background-color: #0055aa; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 10px; text-decoration: none; font-weight: bold; }
-        section { background-color: white; max-width: 800px; margin: 30px auto; padding: 20px; }
-        img { width: 100%; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
+<header class="m3-top-app-bar">
     <h1>Tennis</h1>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="Swimming.html">Swimming</a>
+<nav class="m3-nav">
+    <a href="index.html" class="m3-nav-link">Home</a>
+    <a href="Swimming.html" class="m3-nav-link">Swimming</a>
 </nav>
 
-<section>
-    <img src="Tennis.jpg">
-    <p>
-        Tennis is a sport played individually or in doubles.
-        Players use a racket to hit a ball over a net.
-    </p>
-    <ul>
-        <li>Played on grass, clay, or hard courts</li>
-        <li>Wimbledon is the oldest tournament</li>
-        <li>Can be played indoors or outdoors</li>
-    </ul>
-</section>
+<div class="container">
+    <div class="m3-card fade-in">
+        <div style="border-radius: var(--radius-large); overflow: hidden; margin-bottom: 32px;">
+            <img src="Tennis.jpg" alt="Tennis" style="width: 100%; display: block;">
+        </div>
+        <p>
+            Tennis is a sport played individually or in doubles.
+            Players use a racket to hit a ball over a net.
+        </p>
+        <ul class="m3-list">
+            <li>Played on grass, clay, or hard courts</li>
+            <li>Wimbledon is the oldest tournament</li>
+            <li>Can be played indoors or outdoors</li>
+        </ul>
+    </div>
+</div>
 
 </body>
 </html>

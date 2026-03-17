@@ -1,0 +1,246 @@
+:root {
+  --color-primary: #0F172A;
+  --color-accent: #334155;
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
+  
+  --ease-elegant: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  --radius-xl: 32px;
+  --radius-lg: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.m3-top-app-bar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.m3-top-app-bar h1 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.m3-nav {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.m3-nav-link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.4s var(--ease-elegant);
+  border: 1px solid transparent;
+}
+
+.m3-nav-link:hover {
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  transform: translateY(-1px);
+}
+
+.m3-nav-link.active {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-section {
+  text-align: center;
+  padding: 120px 24px;
+  background-image: radial-gradient(at 0% 0%, hsla(210,100%,98%,1) 0, transparent 50%), 
+                    radial-gradient(at 50% 0%, hsla(210,100%,96%,1) 0, transparent 50%);
+}
+
+.hero-section h2 {
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  margin: 0 0 24px 0;
+  color: var(--color-primary);
+}
+
+.hero-section p {
+  font-size: 20px;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.m3-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: 56px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 80px;
+}
+
+.m3-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+.sport-grid {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 40px 0;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.sport-grid::-webkit-scrollbar { display: none; }
+
+.sport-card {
+  flex: 0 0 340px;
+  scroll-snap-align: center;
+  text-decoration: none;
+  color: inherit;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all 0.6s var(--ease-elegant);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.sport-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 1s var(--ease-elegant);
+}
+
+.sport-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.sport-card:hover img {
+  transform: scale(1.08);
+}
+
+.sport-card .content {
+  padding: 32px;
+}
+
+.sport-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.carousel-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-elegant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.m3-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.m3-list li {
+  padding: 20px 24px;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  margin-bottom: 12px;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s var(--ease-elegant);
+}
+
+.m3-list li:hover {
+  background: var(--color-surface);
+  transform: translateX(12px);
+  box-shadow: var(--shadow-sm);
+}
+
+.fade-in {
+  animation: reveal 1.2s var(--ease-elegant) both;
+}
+
+@keyframes reveal {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .m3-top-app-bar { padding: 16px 24px; }
+  .sport-card { flex: 0 0 85%; }
+  .m3-card { padding: 32px; }
+}

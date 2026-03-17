@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swimming</title>
-    <style>
-        body { font-family: Arial; background-color: #f2f2f2; margin: 0; }
-        header { background-color: #003366; color: white; padding: 20px; text-align: center; }
-        nav { background-color: #0055aa; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 10px; text-decoration: none; font-weight: bold; }
-        section { background-color: white; max-width: 800px; margin: 30px auto; padding: 20px; }
-        img { width: 100%; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
+<header class="m3-top-app-bar">
     <h1>Swimming</h1>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="Athletics.html">Athletics</a>
+<nav class="m3-nav">
+    <a href="index.html" class="m3-nav-link">Home</a>
+    <a href="Athletics.html" class="m3-nav-link">Athletics</a>
 </nav>
 
-<section>
-    <img src="Swimming.jpg">
-    <p>
-        Swimming is an individual sport where athletes move through water using different techniques.
-    </p>
-    <ul>
-        <li>Important life skill</li>
-        <li>Olympic sport</li>
-        <li>Four main swimming styles</li>
-    </ul>
-</section>
+<div class="container">
+    <div class="m3-card fade-in">
+        <div style="border-radius: var(--radius-large); overflow: hidden; margin-bottom: 32px;">
+            <img src="Swimming.jpg" alt="Swimming" style="width: 100%; display: block;">
+        </div>
+        <p>
+            Swimming is an individual sport where athletes move through water using different techniques.
+        </p>
+        <ul class="m3-list">
+            <li>Important life skill</li>
+            <li>Olympic sport</li>
+            <li>Four main swimming styles</li>
+        </ul>
+    </div>
+</div>
 
 </body>
 </html>
